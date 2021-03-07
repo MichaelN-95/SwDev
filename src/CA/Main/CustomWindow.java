@@ -12,12 +12,11 @@ import java.security.cert.PolicyNode;
  * define what goes into our window - in this case a single JPanel which is
  * a component container for GUI elements.
  */
-public class CustomWindow extends JFrame implements MouseListener {
+public class CustomWindow extends JFrame{
     private CustomPanel mainPanel;
     public CustomWindow(ShapesManager shapesManager)
     {
         mainPanel = new CustomPanel(shapesManager);
-        mainPanel.addMouseListener(this);
 //        mainPanel.addMouseListener(mainPanel);
         //add our new panel to the frame
         add(mainPanel, BorderLayout.CENTER);
@@ -25,31 +24,4 @@ public class CustomWindow extends JFrame implements MouseListener {
         setSize(Consts.FRAME_WIDTH, Consts.FRAME_HEIGHT);
     }
 
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        Point point = new Point(e.getX(),e.getY());
-        System.out.println(point.getX() + point.getY());
-//        if (point.getX() && point.getX() == )
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
 }

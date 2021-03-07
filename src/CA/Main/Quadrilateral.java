@@ -43,6 +43,11 @@ public class Quadrilateral extends Shape implements Rotatable {
     }
 
     @Override
+    public void setBoundingBox(int xCenter, int yCenter) {
+
+    }
+
+    @Override
     public void rotate90() {
 
     }

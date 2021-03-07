@@ -7,12 +7,45 @@ public class Rectangle extends Shape implements Movable{
 
     private int width;
     private int height;
-
+    private BoundingBox boundingBox;
     public Rectangle(Color color, boolean filled, int xCenter, int yCenter,int width,int height) {
         super(color, filled, xCenter, yCenter);
         this.width = width;
         this.height= height;
+        setBoundingBox(xCenter,yCenter);
     }
+
+    public Rectangle(Color color, boolean filled) {
+        super(color, filled);
+    }
+
+    @Override
+    public void drawShape(Graphics g) {
+
+        if (width==height){
+            System.out.println("square");
+            Square square = new Square(color,true,xCenter,yCenter,width,height);
+            square.drawShape(g);
+        }else {
+            g.setColor(color);
+            g.drawRect(xCenter, yCenter, width, height);
+            System.out.println("rec");
+        }
+
+    }
+
+    @Override
+    public void setBoundingBox(int xCenter, int yCenter) {
+        boundingBox = new BoundingBox(xCenter, yCenter, width, height);
+        System.out.println(boundingBox.toString());
+    }
+
+
+    @Override
+    public void moveTenX() {
+
+    }
+
     public int getWidth() {
         return width;
     }
@@ -27,24 +60,6 @@ public class Rectangle extends Shape implements Movable{
 
     public void setHeight(int height) {
         this.height = height;
-    }
-
-    @Override
-    public void drawShape(Graphics g) {
-
-        if (width==height){
-            System.out.println("square");
-            Square square = new Square(color,true,xCenter,yCenter,width,height);
-            square.drawShape(g);
-        }else {
-            g.setColor(color);
-            g.drawRect(xCenter, yCenter, width, height);
-        }
-    }
-
-    @Override
-    public void moveTenX() {
-
     }
 
     @Override

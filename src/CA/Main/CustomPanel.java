@@ -31,9 +31,7 @@ public class CustomPanel extends JPanel implements MouseListener {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                //In this example I'm simply printing out the information stored in
-                //the MouseEvent object
-                System.out.println(e.toString());
+                shapesManager.shapeClick(e);
             }
         });
     }
@@ -48,9 +46,10 @@ public class CustomPanel extends JPanel implements MouseListener {
         shapesManager.drawShapes(g);
     }
 
+
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        System.out.println("CustomPanel.mouseClicked");
     }
 
     @Override

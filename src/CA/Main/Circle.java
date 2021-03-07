@@ -32,6 +32,12 @@ public class Circle extends Shape {
 
     }
 
+    @Override
+    public void setBoundingBox(int xCenter, int yCenter) {
+
+    }
+
+
     public int getWidth() {
         return width;
     }

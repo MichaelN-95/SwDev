@@ -2,11 +2,11 @@ package CA.Main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 //This class should take in Shape objects, paint them to the panel
 //TODO toggle shape names in "showDisplayName" i.e "rectangle", "circle" etc
-//todo implement drawShapes
 public class ShapesManager extends JPanel {
     private final ArrayList<Shape> shapeArrayList = new ArrayList<>();
     boolean showDisplayName;
@@ -27,9 +27,19 @@ public class ShapesManager extends JPanel {
 
     }
 
-        // to be used to draw shapes
-        //for each loop goes through each shape in the shapesArrayList
+    public void shapeClick(MouseEvent e){
+        Point point = new Point(e.getX(),e.getY());
+        System.out.println("click check");
 
+//        for (Shape s : shapeArrayList) {
+//
+////            if(s(e.getPoint())) {
+////                System.out.println("shape");
+////            }
+//        }
 
     }
+
+
+}
 

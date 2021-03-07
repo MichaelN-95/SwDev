@@ -24,6 +24,8 @@ public abstract class Shape {
     //needed as per doc
     public abstract void drawShape(Graphics g);
 
+    public abstract void setBoundingBox(int xCenter,int yCenter);
+
     @Override
     public String toString() {
         return "Shape{" +

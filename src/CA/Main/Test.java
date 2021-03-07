@@ -15,7 +15,7 @@ public class Test {
         Rectangle square = new Rectangle(Color.red, false,190,121,81, 81);
 
         Quadrilateral quad = new Quadrilateral(Color.blue,false,(new Point(220,200)),(new Point(200,220)),(new Point(220,360)),(new Point(240,350)));
-//        Quadrilateral quadrilateral = new Quadrilateral(Color.pink,false,rectangle);
+//      Quadrilateral quadrilateral = new Quadrilateral(Color.pink,false,rectangle);
         shapesManager.addShape(quad);
 
 
