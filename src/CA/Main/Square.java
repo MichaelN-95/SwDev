@@ -1,0 +1,20 @@
+package CA.Main;
+
+import java.awt.*;
+
+public class Square extends Shape{
+    public Square(Color color, boolean filled, int xCenter, int yCenter, int width, int height) {
+        super(color, filled);
+        this.xCenter = xCenter;
+        this.yCenter = yCenter;
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public void drawShape(Graphics g) {
+        System.out.println("Square.drawShape");
+        g.setColor(color);
+        g.drawRect(xCenter,yCenter,width,height);
+    }
+}
